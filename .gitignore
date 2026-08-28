@@ -1,0 +1,34 @@
+# 1. 编译与打包产物 (Maven Build Outputs)
+target/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# 2. IDEA 与 Eclipse 开发工具临时文件
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# 3. 日志与系统临时文件
+*.log
+logs/
+.DS_Store
+Thumbs.db
+crash-*.log
+
+# 4. 操作系统及环境配置文件
+.env
+*.env.local
+
+# 5. 保留根目录及核心构建文件
+!pom.xml
+!src/
