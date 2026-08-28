@@ -13,7 +13,7 @@
 | 缓存 | Redis 7.0（匹配队列 / 房间实时状态 / 排行榜 / 结算幂等） |
 | 环境 | Docker Compose 启动 MySQL 与 Redis |
 
-## 快速启动（约 5 分钟）
+## 快速启动
 
 > 前置要求：已安装 JDK 17+、Maven、Node.js 18+、Docker（Docker Desktop）。
 
