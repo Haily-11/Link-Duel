@@ -32,3 +32,10 @@ crash-*.log
 # 5. 保留根目录及核心构建文件
 !pom.xml
 !src/
+
+# 6. 前端 (Vue/Vite)
+frontend/node_modules/
+frontend/dist/
+
+# 7. 本地开发覆盖（含本机数据库密码，不提交）
+application-local.yml

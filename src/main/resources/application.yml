@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: linkgame
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:linkgame}?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 3000ms
+
+# 对局相关业务参数
+linkgame:
+  # 断线后允许重连恢复的宽限秒数
+  reconnect-grace-seconds: 60
+  # 每成功消除一对的得分
+  score-per-pair: 10
+  # 棋盘边长（实际可玩区域为 size x size，外围一圈为 0 的边框用于越界路径）
+  board-size: 8
+  # 图案种类数（size*size 必须能被 2*图案数 整除）
+  emoji-count: 8
